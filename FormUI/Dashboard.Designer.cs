@@ -42,13 +42,14 @@ namespace FormUI
             this.phoneNumberInsLabel = new System.Windows.Forms.Label();
             this.phoneNumberInsText = new System.Windows.Forms.TextBox();
             this.insertRecordButton = new System.Windows.Forms.Button();
+            this.message = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // peopleFoundListbox
             // 
             this.peopleFoundListbox.FormattingEnabled = true;
             this.peopleFoundListbox.ItemHeight = 25;
-            this.peopleFoundListbox.Location = new System.Drawing.Point(32, 123);
+            this.peopleFoundListbox.Location = new System.Drawing.Point(54, 102);
             this.peopleFoundListbox.Name = "peopleFoundListbox";
             this.peopleFoundListbox.Size = new System.Drawing.Size(498, 104);
             this.peopleFoundListbox.TabIndex = 4;
@@ -63,7 +64,7 @@ namespace FormUI
             // lastNamelable
             // 
             this.lastNamelable.AutoSize = true;
-            this.lastNamelable.Location = new System.Drawing.Point(38, 45);
+            this.lastNamelable.Location = new System.Drawing.Point(49, 51);
             this.lastNamelable.Name = "lastNamelable";
             this.lastNamelable.Size = new System.Drawing.Size(115, 25);
             this.lastNamelable.TabIndex = 2;
@@ -71,9 +72,9 @@ namespace FormUI
             // 
             // searchButton
             // 
-            this.searchButton.Location = new System.Drawing.Point(95, 82);
+            this.searchButton.Location = new System.Drawing.Point(350, 45);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(88, 33);
+            this.searchButton.Size = new System.Drawing.Size(88, 31);
             this.searchButton.TabIndex = 3;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
@@ -82,7 +83,7 @@ namespace FormUI
             // firstNameInsLabel
             // 
             this.firstNameInsLabel.AutoSize = true;
-            this.firstNameInsLabel.Location = new System.Drawing.Point(38, 262);
+            this.firstNameInsLabel.Location = new System.Drawing.Point(49, 262);
             this.firstNameInsLabel.Name = "firstNameInsLabel";
             this.firstNameInsLabel.Size = new System.Drawing.Size(116, 25);
             this.firstNameInsLabel.TabIndex = 6;
@@ -90,7 +91,7 @@ namespace FormUI
             // 
             // firstNameInsText
             // 
-            this.firstNameInsText.Location = new System.Drawing.Point(193, 262);
+            this.firstNameInsText.Location = new System.Drawing.Point(193, 256);
             this.firstNameInsText.Name = "firstNameInsText";
             this.firstNameInsText.Size = new System.Drawing.Size(151, 31);
             this.firstNameInsText.TabIndex = 5;
@@ -145,7 +146,7 @@ namespace FormUI
             // 
             // insertRecordButton
             // 
-            this.insertRecordButton.Location = new System.Drawing.Point(141, 450);
+            this.insertRecordButton.Location = new System.Drawing.Point(193, 478);
             this.insertRecordButton.Name = "insertRecordButton";
             this.insertRecordButton.Size = new System.Drawing.Size(88, 33);
             this.insertRecordButton.TabIndex = 13;
@@ -153,11 +154,21 @@ namespace FormUI
             this.insertRecordButton.UseVisualStyleBackColor = true;
             this.insertRecordButton.Click += new System.EventHandler(this.insertRecordButton_Click);
             // 
+            // message
+            // 
+            this.message.AutoSize = true;
+            this.message.Location = new System.Drawing.Point(202, 582);
+            this.message.Name = "message";
+            this.message.Size = new System.Drawing.Size(0, 25);
+            this.message.TabIndex = 14;
+            this.message.Click += new System.EventHandler(this.label1_Click);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1272, 690);
+            this.Controls.Add(this.message);
             this.Controls.Add(this.insertRecordButton);
             this.Controls.Add(this.phoneNumberInsLabel);
             this.Controls.Add(this.phoneNumberInsText);
@@ -195,6 +206,7 @@ namespace FormUI
         private System.Windows.Forms.Label phoneNumberInsLabel;
         private System.Windows.Forms.TextBox phoneNumberInsText;
         private System.Windows.Forms.Button insertRecordButton;
+        private System.Windows.Forms.Label message;
     }
 }
 
