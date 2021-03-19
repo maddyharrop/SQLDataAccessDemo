@@ -18,6 +18,11 @@ namespace FormUI
         {
             InitializeComponent();
 
+            UpdateBinding();
+        }
+
+        private void UpdateBinding()
+        {
             peopleFoundListbox.DataSource = people;
             peopleFoundListbox.DisplayMember = "FullInfo";
         }
@@ -27,6 +32,22 @@ namespace FormUI
             DataAccess db = new DataAccess();
 
             people = db.GetPeople(lastNameText.Text);
+
+            UpdateBinding();
+            
+        }
+
+        private void insertRecordButton_Click(object sender, EventArgs e)
+        {
+            DataAccess db = new DataAccess();
+
+            db.InsertPerson(firstNameInsText.Text, lastNameInsText.Text, emailAddressInsText.Text, phoneNumberInsText.Text);
+
+            firstNameInsText.Text = "";
+            lastNameInsText.Text = "";
+            emailAddressInsText.Text = "";
+            phoneNumberInsText.Text = "";
+
         }
     }
 }
